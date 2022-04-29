@@ -144,28 +144,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaB-uT-tRI">
-                                <rect key="frame" x="59" y="241" width="296" height="149"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BMI Background 2" translatesAutoresizingMaskIntoConstraints="NO" id="V0X-Tz-ik4">
+                                <rect key="frame" x="1" y="-11" width="414" height="853"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SrZ-bs-sAu">
+                                <rect key="frame" x="67" y="187" width="280" height="212"/>
                                 <color key="backgroundColor" red="0.4588235021" green="0.70588237050000002" blue="0.47843140360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtB-A4-uNr">
-                                <rect key="frame" x="103" y="201" width="208" height="31"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
-                                <color key="textColor" red="0.2235293984" green="0.25098040700000002" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-ea-QHF">
-                                <rect key="frame" x="121" y="253" width="172" height="125"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="80"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgN-1u-1dT">
-                                <rect key="frame" x="105.5" y="399" width="203" height="21"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="qp7-mQ-C3W"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWJ-Bc-Tgo">
                                 <rect key="frame" x="59" y="703" width="298" height="83.5"/>
                                 <constraints>
@@ -183,36 +171,53 @@
                                     <action selector="recalculatePressed:" destination="zSv-UQ-5uq" eventType="touchUpInside" id="Mqr-rR-kXZ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="BMI Background 2" translatesAutoresizingMaskIntoConstraints="NO" id="V0X-Tz-ik4">
-                                <rect key="frame" x="1" y="-55" width="414" height="897"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtB-A4-uNr">
+                                <rect key="frame" x="103" y="201" width="208" height="31"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <color key="textColor" red="0.2235293984" green="0.25098040700000002" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-ea-QHF">
+                                <rect key="frame" x="121" y="253" width="172" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="dCo-HN-579"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgN-1u-1dT">
+                                <rect key="frame" x="105.5" y="354" width="203" height="21"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oqd-FO-Bae"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="KtB-A4-uNr" secondAttribute="centerX" id="0vr-4E-vWg"/>
-                            <constraint firstItem="V0X-Tz-ik4" firstAttribute="top" secondItem="eAB-b3-M6f" secondAttribute="topMargin" constant="-55" id="1YO-rF-DNB"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="DaB-uT-tRI" secondAttribute="centerX" id="4Mz-9B-HRd"/>
-                            <constraint firstItem="Oqd-FO-Bae" firstAttribute="trailing" secondItem="mWJ-Bc-Tgo" secondAttribute="trailing" constant="57" id="AJ5-wW-b7M"/>
-                            <constraint firstItem="DaB-uT-tRI" firstAttribute="top" secondItem="Oqd-FO-Bae" secondAttribute="top" constant="197" id="B10-vG-Xo0"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="V0X-Tz-ik4" secondAttribute="bottom" constant="-34" id="Ch2-bu-TmX"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="dgN-1u-1dT" secondAttribute="centerX" id="JZa-uY-Jrh"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="top" secondItem="KtB-A4-uNr" secondAttribute="bottom" constant="21" id="KKn-zc-IxP"/>
-                            <constraint firstItem="mWJ-Bc-Tgo" firstAttribute="top" secondItem="DaB-uT-tRI" secondAttribute="bottom" constant="313" id="Lqo-YO-w55"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerY" secondItem="DaB-uT-tRI" secondAttribute="centerY" id="Owm-S1-BMK"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="V0X-Tz-ik4" secondAttribute="centerX" constant="-1" id="UKW-ot-RHb"/>
-                            <constraint firstItem="dgN-1u-1dT" firstAttribute="top" secondItem="0y5-ea-QHF" secondAttribute="bottom" constant="21" id="W6Y-yn-caH"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="eAB-b3-M6f" secondAttribute="centerX" id="Xtd-mv-oW4"/>
+                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="SrZ-bs-sAu" secondAttribute="centerX" id="2cm-0O-5th"/>
+                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerX" secondItem="KtB-A4-uNr" secondAttribute="centerX" id="6cE-cF-1aT"/>
+                            <constraint firstItem="Oqd-FO-Bae" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mWJ-Bc-Tgo" secondAttribute="trailing" id="AJ5-wW-b7M"/>
+                            <constraint firstItem="KtB-A4-uNr" firstAttribute="top" secondItem="Oqd-FO-Bae" secondAttribute="top" constant="157" id="CKs-yg-XKX"/>
+                            <constraint firstItem="SrZ-bs-sAu" firstAttribute="top" secondItem="Oqd-FO-Bae" secondAttribute="top" constant="143" id="CQK-3N-cxN"/>
+                            <constraint firstAttribute="bottom" secondItem="V0X-Tz-ik4" secondAttribute="bottom" id="Cjy-Vh-LHl"/>
+                            <constraint firstItem="V0X-Tz-ik4" firstAttribute="top" secondItem="eAB-b3-M6f" secondAttribute="topMargin" constant="-55" id="Jma-kw-cNV"/>
+                            <constraint firstItem="Oqd-FO-Bae" firstAttribute="trailing" secondItem="SrZ-bs-sAu" secondAttribute="trailing" constant="67" id="Oue-Qq-DC4"/>
+                            <constraint firstItem="V0X-Tz-ik4" firstAttribute="leading" secondItem="Oqd-FO-Bae" secondAttribute="leading" constant="1" id="QAR-WC-DEx"/>
+                            <constraint firstItem="SrZ-bs-sAu" firstAttribute="leading" secondItem="Oqd-FO-Bae" secondAttribute="leading" constant="67" id="ZQ2-b3-gcz"/>
+                            <constraint firstItem="dgN-1u-1dT" firstAttribute="top" secondItem="0y5-ea-QHF" secondAttribute="bottom" constant="21" id="aQ2-uq-gYv"/>
                             <constraint firstItem="Oqd-FO-Bae" firstAttribute="bottom" secondItem="mWJ-Bc-Tgo" secondAttribute="bottom" constant="55.5" id="b96-zO-zF3"/>
-                            <constraint firstItem="V0X-Tz-ik4" firstAttribute="leading" secondItem="Oqd-FO-Bae" secondAttribute="leading" constant="1" id="bgr-xr-BCo"/>
-                            <constraint firstItem="DaB-uT-tRI" firstAttribute="leading" secondItem="mWJ-Bc-Tgo" secondAttribute="leading" id="kJn-gE-Ucs"/>
                             <constraint firstItem="mWJ-Bc-Tgo" firstAttribute="leading" secondItem="Oqd-FO-Bae" secondAttribute="leading" constant="59" id="mvs-bW-tTt"/>
-                            <constraint firstItem="0y5-ea-QHF" firstAttribute="top" secondItem="eAB-b3-M6f" secondAttribute="top" constant="253" id="owN-qs-7pH"/>
+                            <constraint firstItem="V0X-Tz-ik4" firstAttribute="centerX" secondItem="mWJ-Bc-Tgo" secondAttribute="centerX" id="pgU-Dw-Fm5"/>
+                            <constraint firstItem="0y5-ea-QHF" firstAttribute="centerY" secondItem="SrZ-bs-sAu" secondAttribute="centerY" id="ukq-4U-q7O"/>
+                            <constraint firstItem="dgN-1u-1dT" firstAttribute="centerX" secondItem="0y5-ea-QHF" secondAttribute="centerX" id="vsA-xq-h75"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adviceLabel" destination="DaB-uT-tRI" id="81S-2y-QGf"/>
+                        <outlet property="adviceLabel" destination="dgN-1u-1dT" id="fdI-Ff-wQa"/>
                         <outlet property="bmiLabel" destination="0y5-ea-QHF" id="n04-eH-U4D"/>
+                        <outlet property="bmiValueColor" destination="SrZ-bs-sAu" id="ENy-4O-YTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tR-c1-KYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
